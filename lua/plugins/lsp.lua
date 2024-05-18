@@ -24,10 +24,10 @@ return {
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 			vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, {})
 			vim.keymap.set("n", "<leader>i", "<cmd>LspInfo<CR>", {})
-			vim.keymap.set("n", "<leader>de", vim.diagnostic.open_float, {})
-			vim.keymap.set("n", "<leader>d>", vim.diagnostic.goto_prev, {})
-			vim.keymap.set("n", "<leader>d<", vim.diagnostic.goto_next, {})
-			vim.keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", {})
+			vim.keymap.set("n", "<leader>dd", vim.diagnostic.open_float, {})
+			vim.keymap.set("n", "<leader><", vim.diagnostic.goto_prev, {})
+			vim.keymap.set("n", "<leader>>", vim.diagnostic.goto_next, {})
+			vim.keymap.set("n", "D", "<cmd>Telescope diagnostics bufnr=0<CR>", {})
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
