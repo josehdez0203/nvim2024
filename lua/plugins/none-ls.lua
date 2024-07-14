@@ -31,6 +31,7 @@ return {
 				"prettierd", -- prettier formatter
 				"stylua", -- lua formatter
 				"black", -- python formatter
+				"gofumpt", -- go formatter
 				"pylint", -- python linter
 				"eslint_d", -- js linter
 			},
@@ -65,6 +66,7 @@ return {
 				formatting.isort,
 				formatting.black,
 				formatting.dart_format,
+				formatting.gofumpt,
 				-- formatting.phpcbf,
 				formatting.pretty_php,
 				-- formatting.prettier.with({

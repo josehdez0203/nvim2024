@@ -6,7 +6,7 @@ return {
 		config = function()
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<C-/>", builtin.find_files, {})
-			vim.keymap.set("n", "<C-b>", builtin.buffers, {})
+			vim.keymap.set("n", "<C-P>", builtin.buffers, {})
 			vim.keymap.set("n", "<leader>o", builtin.oldfiles, {})
 			vim.keymap.set("n", "<leader>g", builtin.live_grep, {})
 			vim.keymap.set("n", "<leader>t", builtin.help_tags, {})

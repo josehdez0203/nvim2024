@@ -47,3 +47,8 @@ keymap.set("v", ">", ">gv", { noremap = true, silent = false })
 --   [[:<c-u>let temp_variable=@"<CR>gvy:<c-u>let @/='\V<C-R>=escape(@",'/\')<CR>'<CR>:let @"=temp_variable<CR>]],
 --   { silent = true }
 -- )
+vim.keymap.set("n", "<leader>p", function()
+	local val = vim.fn.getreg("+")
+	vim.api.nvim_command([[normal! p]])
+	vim.fn.setreg("+", val)
+end, {})

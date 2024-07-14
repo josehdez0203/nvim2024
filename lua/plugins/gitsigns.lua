@@ -13,4 +13,8 @@ return {
 		},
 		signcolumn = true,
 	},
+	keys = {
+		{ "tl", ":Gitsigns toggle_signs<CR>", desc = "Alternar line signs", silent = true },
+		{ "tg", ":Gitsigns toggle_current_line_blame<CR>", desc = "Alternar line blame", silent = true },
+	},
 }

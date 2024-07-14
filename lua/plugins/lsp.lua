@@ -19,8 +19,9 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+			vim.keymap.set("n", "k", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+			vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 			vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, {})
 			vim.keymap.set("n", "<leader>i", "<cmd>LspInfo<CR>", {})
@@ -35,12 +36,10 @@ return {
 			lspconfig["html"].setup({
 				capabilities = capabilities,
 			})
-
 			-- configure typescript server with plugin
 			lspconfig["tsserver"].setup({
 				capabilities = capabilities,
 			})
-
 			-- configure css server
 			lspconfig["cssls"].setup({
 				capabilities = capabilities,
@@ -48,7 +47,6 @@ return {
 			lspconfig["gopls"].setup({
 				capabilities = capabilities,
 			})
-
 			-- configure emmet language server
 			lspconfig["emmet_ls"].setup({
 				capabilities = capabilities,
